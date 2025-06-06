@@ -25,20 +25,116 @@
             <li><a href="bilan.html" class="active">Bilan Personnel</a></li>
         </ul>
     </nav>
-    
-    <!-- Section de téléchargement du PDF -->
-    <div class="pdf-download-section">
-        <div class="pdf-card">
-            <div class="pdf-icon">
-                <i class="fas fa-file-pdf"></i>
+
+    <div class="page-content">
+        <!-- Sélecteur d'année -->
+        <div class="year-selector">
+            <label for="year-select">Choisissez l'année :</label>
+            <select id="year-select" onchange="showBilan()">
+                <option value="">-- Sélectionnez une année --</option>
+                <option value="year1">1ère année (BUT1)</option>
+                <option value="year2">2ème année (BUT2)</option>
+                <option value="year3">3ème année (BUT3)</option>
+            </select>
+        </div>
+
+        <!-- Contenu du bilan pour la 1ère année -->
+        <div id="year1-content" class="bilan-content" style="display: none;">
+            <div class="bilan-intro">
+                <h2>Bilan Personnel – Année de BUT1 Science des Données</h2>
+                
+                <div class="bilan-section">
+                    <h3>Introduction</h3>
+                    <p>J'ai choisi d'intégrer le BUT Science des Données après avoir assisté à un salon de l'étudiant, où cette formation m'a été recommandée. Elle a tout de suite retenu mon attention, notamment grâce à son fort lien avec l'informatique, un domaine qui m'a toujours passionné. Les mathématiques étant également un de mes points forts, je me voyais sinon poursuivre une licence en mathématiques et informatique.</p>
+                    <p>À la rentrée, comme beaucoup, j'étais à la fois stressé de ne connaître personne, et excité à l'idée de découvrir un nouvel environnement. J'avais quelques appréhensions sur mon niveau en informatique, mais j'ai fait de mon mieux pour rattraper ce retard, notamment en m'investissant davantage en programmation.</p>
+                </div>
+
+                <div class="bilan-section">
+                    <h3>Bilan Académique</h3>
+                    <p>Dans l'ensemble, je suis satisfait de ma première année. Je n'ai pas rencontré de grandes difficultés d'un point de vue scolaire. C'est en programmation que j'ai le plus progressé : j'y ai investi beaucoup de temps et c'est une matière qui me motive réellement. Une belle surprise a été la matière de communication. Je ne m'attendais pas à y apprendre autant, notamment sur les aspects non verbaux de la communication.</p>
+                    <p>Côté organisation, j'ai essayé de me tenir à une routine quotidienne, en travaillant environ 30 minutes chaque soir. Cela m'a permis de rester régulier sans me sentir débordé. Une grande fierté cette année a été notre 3e place au concours Dataviz, un projet d'équipe qui m'a beaucoup apporté.</p>
+                </div>
+
+                <div class="bilan-section">
+                    <h3>Compétences Acquises</h3>
+                    <p>Tout au long de l'année, j'ai pu approfondir plusieurs langages et outils, parmi lesquels Python et SQL se sont démarqués. J'ai particulièrement apprécié Python pour sa simplicité et sa puissance, et SQL m'a passionné par sa logique claire et sa grande utilité en base de données.</p>
+                    <p>Le projet sur les bases de données m'a particulièrement marqué. Il m'a permis de mettre en pratique plusieurs compétences en même temps, tout en travaillant en groupe. C'est d'ailleurs l'un des grands apprentissages de cette année : j'ai beaucoup appris sur le travail en équipe, la gestion du temps et l'organisation, que ce soit dans les projets ou dans la gestion de mon emploi du temps personnel.</p>
+                </div>
+
+                <div class="bilan-section">
+                    <h3>Réflexion et Développement Personnel</h3>
+                    <p>Cette année m'a permis de changer ma manière de travailler. J'ai compris l'importance de m'impliquer pleinement dans mes études, notamment parce que la formation me plaît vraiment. J'ai donc été beaucoup plus motivé, et j'ai gagné en confiance en moi au fil des mois.</p>
+                    <p>Sur le plan personnel, un tournant important a été ma décision de quitter mon club de tennis de table, où je jouais depuis dix ans. J'ai rejoint un nouveau club à Niort, dans le même esprit que pour mes études : relever de nouveaux défis et viser de nouveaux objectifs.</p>
+                </div>
+
+                <div class="bilan-section">
+                    <h3>Projets Futurs</h3>
+                    <p>Pour ma deuxième année, je souhaite vivement trouver une alternance, même si pour le moment, mes recherches n'ont pas encore abouti. Je continue mes démarches avec persévérance. J'ai choisi l'option "Visualisation et conception d'outils dynamiques", car c'est dans la programmation que je prends le plus de plaisir, bien plus que dans les mathématiques, même si je continue à les apprécier.</p>
+                    <p>À plus long terme, je me vois évoluer dans le domaine de la finance, avec comme objectif de devenir analyste financier. C'est un parcours ambitieux, mais je suis conscient qu'il demandera beaucoup de rigueur, de travail et de persévérance.</p>
+                </div>
             </div>
-            <h3>Télécharger le bilan complet</h3>
-            <p>Accédez à mon bilan personnel détaillé au format PDF pour une lecture complète et approfondie.</p>
-            <a href="Bilan.pdf" class="btn-primary download-btn" target="_blank">
-                <i class="fas fa-download"></i>
-                Télécharger le PDF
-            </a>
+        </div>
+
+        <!-- Contenu pour la 2ème année -->
+        <div id="year2-content" class="bilan-content" style="display: none;">
+            <div class="bilan-intro">
+                <h2>Bilan Personnel – Année de BUT2 Science des Données</h2>
+                <div class="coming-soon">
+                    <i class="fas fa-clock"></i>
+                    <h3>Prochainement</h3>
+                    <p>Le bilan de la deuxième année sera disponible à la fin de l'année scolaire.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenu pour la 3ème année -->
+        <div id="year3-content" class="bilan-content" style="display: none;">
+            <div class="bilan-intro">
+                <h2>Bilan Personnel – Année de BUT3 Science des Données</h2>
+                <div class="coming-soon">
+                    <i class="fas fa-clock"></i>
+                    <h3>Prochainement</h3>
+                    <p>Le bilan de la troisième année sera disponible à la fin de l'année scolaire.</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> email@example.com</p>
+                <p><i class="fas fa-phone"></i> +33 X XX XX XX XX</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showBilan() {
+            const yearSelect = document.getElementById('year-select');
+            const selectedYear = yearSelect.value;
+            
+            // Cacher tous les contenus
+            const allContents = document.querySelectorAll('.bilan-content');
+            allContents.forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // Afficher le contenu sélectionné
+            if (selectedYear) {
+                const selectedContent = document.getElementById(selectedYear + '-content');
+                if (selectedContent) {
+                    selectedContent.style.display = 'block';
+                    selectedContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        }
+    </script>
 </body>
 </html>
