@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio HTML5 : CV et Contacts Professionnels</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="PXL_20250316_103242099.MP.jpg" alt="Profile Image" class="profile-image">
+            <h1 class="scroll-text">Mon Portfolio Professionnel</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-list">
+            <li><a href="../index.html" class="home-link"><i class="fas fa-home"></i></a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="cv.html" class="active">Mon CV et Contacts Professionnels</a></li>
+            <li><a href="bilan.html">Bilan Personnel</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">CV & Contacts</h1>
+            <p class="hero-subtitle">Votre futur collaborateur</p>
+            <p class="hero-description">Découvrez mon parcours professionnel et n'hésitez pas à me contacter pour discuter de vos projets.</p>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="features-grid">
+            <!-- CV Section -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h2 class="feature-title">Mon Curriculum Vitae</h2>
+                <p class="feature-description">Consultez et téléchargez mon CV adapté à différentes opportunités professionnelles.</p>
+                
+                <div class="cv-preview-container">
+                    <iframe id="cvPreview" class="cv-preview" src="CV_Toni_Robertn.pdf"></iframe>
+                    <div class="cv-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Chargement du CV...</p>
+                    </div>
+                </div>
+                
+                <div class="cv-controls">
+                    <select id="cvSelector" class="cv-selector">
+                        <option value="" disabled selected>-- Sélectionnez un CV --</option>
+                        <option value="CV_Toni_Robertn.pdf">CV Niort</option>
+                        <option value="CV_Toni_Robertr.pdf">CV La Roche-sur-Yon</option>
+                    </select>
+                    <a id="downloadLink" href="CV_Toni_Robertn.pdf" target="_blank" class="btn-primary">
+                        <i class="fas fa-download"></i>
+                        Télécharger le CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-address-book"></i>
+                </div>
+                <h2 class="feature-title">Mes Coordonnées</h2>
+                <p class="feature-description">N'hésitez pas à me contacter pour discuter de vos projets ou opportunités professionnelles.</p>
+                
+                <ul class="contact-info">
+                    <li class="contact-item" data-contact="phone">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-label">Téléphone</div>
+                            <div class="contact-value"><strong>07.64.25.39.22</strong></div>
+                        </div>
+                        <div class="contact-action">
+                            <button class="copy-btn" onclick="copyToClipboard('07.64.25.39.22')">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="contact-item" data-contact="email">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value"><strong>tonirobert85@gmail.com</strong></div>
+                        </div>
+                        <div class="contact-action">
+                            <button class="copy-btn" onclick="copyToClipboard('tonirobert85@gmail.com')">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="contact-item" data-contact="linkedin">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">
+                                <a href="https://www.linkedin.com/in/toni-robert-b904a5341" target="_blank">
+                                    Mon profil professionnel
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-action">
+                            <a href="https://www.linkedin.com/in/toni-robert-b904a5341" target="_blank" class="external-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Copié dans le presse-papiers !</span>
+    </div>
+
+    <script>
+        document.getElementById("cvSelector").addEventListener("change", function () {
+            let selectedCV = this.value;
+            let preview = document.getElementById("cvPreview");
+            let downloadBtn = document.getElementById("downloadLink");
+            let loading = document.querySelector(".cv-loading");
+
+            if (selectedCV) {
+                loading.style.display = 'flex';
+                preview.style.opacity = '0';
+
+                setTimeout(() => {
+                    preview.src = selectedCV;
+                    downloadBtn.href = selectedCV;
+                    preview.style.opacity = '1';
+                    loading.style.display = 'none';
+                }, 1000);
+            }
+        });
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Copié dans le presse-papiers !');
+            }).catch(err => {
+                console.error('Erreur lors de la copie : ', err);
+                showToast('Erreur lors de la copie');
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 2}s`;
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.floating-element');
+
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.2);
+                element.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+    </script>
+</body>
+</html>

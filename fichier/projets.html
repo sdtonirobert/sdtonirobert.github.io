@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio HTML5 : Projets</title>
+    <link rel="stylesheet" href="style3.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="PXL_20250316_103242099.MP.jpg" alt="Profile Image" class="profile-image">
+            <h1 class="scroll-text">Bienvenue sur mon Portfolio</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-list">
+            <li><a href="../index.html" class="home-link"><i class="fas fa-home"></i></a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
+            <li><a href="cv.html">Mon CV et Contacts Professionnels</a></li>
+            <li><a href="bilan.html">Bilan Personnel</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Projets Universitaires</h1>
+            <p class="hero-subtitle">Votre futur collaborateur</p>
+            <p class="hero-description">Découvrez mes réalisations au sein du BUT Science des Données, entre analyse, programmation et gestion de projet.</p>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-icon">📁</div>
+            <h2>Conversion de Données Culturelles : JSON vers CSV</h2>
+            <p>Ce projet avait pour objectif de rendre lisible et exploitable un fichier JSON complexe regroupant les événements culturels de la Ville de Paris. En binôme avec Alexan, nous avons conçu un script Python capable d'extraire, nettoyer, formater puis exporter les données au format CSV en seulement 4 heures.</p>
+            <p>Nous avons surmonté des défis liés à l'encodage, aux formats de date, et à la gestion des champs manquants, tout en structurant un code clair et modulaire.</p>
+            <p>Compétences mobilisées : lecture et parsing de JSON, automatisation en Python, structuration de données, rigueur et efficacité dans un temps limité.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📁</div>
+            <h2>Conception et Implémentation d'une Base de Données</h2>
+            <p>Dans ce projet, nous avons construit une base de données relationnelle gérant les ventes et approvisionnements d'une coopérative de sel marin sur l'île de Ré. À partir de fichiers CSV, nous avons modélisé les données (MCD avec Looping) puis créé et interconnecté les tables sous PhpMyAdmin.</p>
+            <p>Des scripts Python ont été utilisés pour automatiser certaines insertions ou vérifications. Ce travail nous a permis de relier théorie et pratique autour des bases de données, en répondant à des besoins réels d'analyse commerciale.</p>
+            <p>Compétences mobilisées : modélisation conceptuelle, SQL, automatisation Python, rigueur dans les structures relationnelles.</p>
+            <a href="https://youtu.be/8O6gbRkXAoI" target="_blank" class="btn">Lire la vidéo</a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📁</div>
+            <h2>Régression Linéaire sur des Données Réelles</h2>
+            <p>Ce projet consistait à estimer les prix de logements à partir de caractéristiques (surface, nombre de pièces, terrain...) grâce à la régression linéaire. Nous avons utilisé le langage R pour construire, entraîner et évaluer notre modèle.</p>
+            <p>Une attention particulière a été portée à la préparation des données, à la sélection des variables explicatives et à l'évaluation via R² et RMSE pour vérifier la robustesse du modèle.</p>
+            <p>Compétences mobilisées : nettoyage de données, modélisation statistique, visualisation, interprétation des performances.</p>
+            <a href="Compte rendu Rémi_MISERY et Toni_ROBERT.pdf" target="_blank" class="pdf-button">
+                <i class="fas fa-file-pdf"></i>
+                Voir le PDF
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📁</div>
+            <h2>Développement d'un Outil de Gestion des Notes en Excel et VBA</h2>
+            <p>Conçu pour les étudiants et enseignants du BUT SD, cet outil développé sous Excel et VBA permet de saisir, filtrer et analyser les notes par semestre et par compétence. Il inclut un tableau de bord dynamique ainsi qu'un guide d'utilisation complet.</p>
+            <p>Le projet, mené en binôme, a permis de renforcer nos compétences en automatisation, en interface utilisateur et en structuration de fichiers Excel complexes.</p>
+            <p>Compétences mobilisées : VBA, UX, reporting automatisé, documentation technique.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📁</div>
+            <h2>Enquête sur le Logement Étudiant et Réussite Sportive</h2>
+            <p>À partir d'une enquête diffusée auprès des étudiants de l'IUT, nous avons analysé le lien entre type de logement et performance sportive. L'analyse statistique a été conduite avec le logiciel Sphinx, complétée par des graphiques et une synthèse des résultats.</p>
+            <p>Ce projet nous a initiés aux techniques d'enquête, à la rédaction de questionnaires et à l'interprétation des données sociologiques.</p>
+            <p>Compétences mobilisées : méthodologie d'enquête, statistique descriptive, analyse critique.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📁</div>
+            <h2>Analyse de Données sur les Accidents de la Vie Courante (MAVIE)</h2>
+            <p>Développement d'une application en Python avec Tkinter pour intégrer, fusionner et visualiser les données MAVIE. Ce projet visait à faciliter l'exploitation de données accidentologiques à des fins d'analyse statistique.</p>
+            <p>Nous avons construit une interface intuitive avec tableaux, filtres et visualisations dynamiques en intégrant pandas, matplotlib et seaborn.</p>
+            <p>Compétences mobilisées : Python avancé, GUI, visualisation, gestion de données hétérogènes.</p>
+        </div>
+    </div>
+</body>
+</html>

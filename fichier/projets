@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio HTML5 : Page d'accueil</title>
+    <link rel="stylesheet" href="./style/style1.css" />
+    <!-- Ajout de FontAwesome pour l'icône de la maison -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="PXL_20250316_103242099.MP.jpg" alt="Profile Image" class="profile-image">
+            <h1 class="scroll-text">Bienvenue sur mon Portfolio</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-list">
+            <!-- Icône de la maison à gauche -->
+            <li><a href="index.html" class="home-link"><i class="fas fa-home"></i></a></li>
+
+            <!-- Autres liens de navigation -->
+            <li><a href="Présentation.html">Présentation</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="accueil.html">Mon CV et Contacts Professionnels</a></li>
+        </ul>
+    </nav>
+	
+	
+
+<body>
+    <h1>Conception et Implémentation d'une Base de Données pour la Coopérative de Sel Marin de l'Île de Ré</h1>
+    <p>
+        Ce projet visait à concevoir et mettre en place une base de données via PhpMyAdmin pour gérer les approvisionnements et les ventes de la coopérative de sel marin de l'île de Ré. À partir de jeux de données CSV, l'objectif était de créer des tables interconnectées dans une base de données SQL, permettant ainsi de générer des requêtes pour évaluer les entrées et sorties de produits, gérer les informations des sauniers et des clients, et maintenir les prix d'achat et de vente.
+    </p>
+    <p>
+        Les outils utilisés incluaient Looping.mcd pour la modélisation du modèle conceptuel de données (MCD), PhpMyAdmin pour la gestion de la base de données, et Python pour certaines tâches d'automatisation. En combinant SQL et Python, nous avons appris à créer et à interroger efficacement la base de données pour obtenir des informations pertinentes.
+    </p>
+    <p>
+        Le projet a permis de développer une compréhension approfondie de la conception de bases de données relationnelles, de la modélisation des données, et de l'automatisation des processus de gestion des données. Les compétences acquises incluent la capacité à interpréter les besoins du client, à respecter les formalismes de notation, à maîtriser la syntaxe des langages de programmation et de requête, et à comprendre les structures algorithmiques de base et leur contexte d'usage.
+    </p>
+    <p>
+        En conclusion, ce projet a été une opportunité précieuse pour appliquer les connaissances théoriques en bases de données à un cas pratique, tout en développant des compétences en programmation et en gestion de projets.
+    </p>
+</body>
+</html>

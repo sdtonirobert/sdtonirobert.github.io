@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Professionnel : Page d'accueil</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Bienvenue sur mon Portfolio Professionnel</h1>
+            <img src="./image/logo-HTML5.jpg" alt="Logo HTML5" class="header-image">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Présentation</a></li>
+            <li><a href="news.html">Actualités</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="encadrement.html">Encadrement</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <form method="post" action="envoyer.html">
+                <p>
+                    <label for="zoneNom">Nom : </label>
+                    <input type="text" id="zoneNom" name="nom" required placeholder="Entrez votre nom">
+                </p>
+                <p>
+                    <label for="zoneMail">E-mail : </label>
+                    <input type="email" id="zoneMail" name="mail" required placeholder="Entrez votre mail">
+                </p> 
+                <p>
+                    <label for="zonePhone">Téléphone : </label>
+                    <input type="tel" id="zonePhone" name="phone" pattern="[0-9]{10}" required placeholder="Numéro de téléphone à 10 chiffres sans espace">
+                </p>
+                <p>
+                    <label for="msg">Votre message : </label>
+                    <textarea id="msg" name="message" cols="25" rows="5" placeholder="Votre message..."></textarea>
+                </p>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
